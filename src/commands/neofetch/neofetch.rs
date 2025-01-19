@@ -11,12 +11,12 @@ pub fn fetch() -> String {
 
     let mut stripes: String = String::new();
 
-    for _ in 0..os.get(0).unwrap().len() {
+    for _ in 0..os.get(0).unwrap().len() / 2 {
         stripes.push('-');
     }
 
 
-    let output = format!("{}\n{}\n{memory}\n{cpu}\n{}\n{}\n{}{gpu}",
+    let output = format!("   {}\n{}\n{memory}\n{cpu}\n{}\n{}\n{}{gpu}",
                           os.get(0).unwrap(),
                           style(stripes).bold(),
                           os.get(1).unwrap(),
