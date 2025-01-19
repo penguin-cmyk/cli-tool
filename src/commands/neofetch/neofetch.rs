@@ -1,4 +1,4 @@
-// note this is ment for linux
+
 mod sysinfo;
 
 use console::style;
@@ -7,7 +7,7 @@ pub fn fetch() -> String {
     let memory: String = sysinfo::memory::memory();
     let cpu: String = sysinfo::cpu::get_cpu_info();
     let os: Vec<String> = sysinfo::os::os();
-    let gpu: String = sysinfo::gpu::gpu(); // prb won't work for all gpus?
+    let gpu: String = sysinfo::gpu::gpu();
 
     let mut stripes: String = String::new();
 
@@ -16,7 +16,7 @@ pub fn fetch() -> String {
     }
 
 
-    let output = format!("   {}\n{}\n{memory}\n{cpu}\n{}\n{}\n{}{gpu}",
+    let output = format!("    {}\n{}\n{memory}\n{cpu}\n{}\n{}\n{}{gpu}",
                           os.get(0).unwrap(),
                           style(stripes).bold(),
                           os.get(1).unwrap(),
