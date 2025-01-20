@@ -1,2 +1,2 @@
 # cli-tool
-simple cli tool rust that im working on
+🦀 Simple cli tool that im working on in rust for fun
