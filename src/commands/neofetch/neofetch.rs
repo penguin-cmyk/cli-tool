@@ -1,4 +1,4 @@
-
+// this was made for linux only maybe windows support soon
 mod sysinfo;
 
 use console::style;
@@ -7,7 +7,7 @@ pub fn fetch() -> String {
     let memory: String = sysinfo::memory::memory();
     let cpu: String = sysinfo::cpu::get_cpu_info();
     let os: Vec<String> = sysinfo::os::os();
-    let gpu: String = sysinfo::gpu::gpu();
+    let gpu: String = sysinfo::gpu::gpu(); // idek if this work for every gpu
 
     let mut stripes: String = String::new();
 
