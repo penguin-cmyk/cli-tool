@@ -1,6 +1,5 @@
 // this was made for linux only maybe windows support soon
 mod sysinfo;
-
 use console::style;
 
 pub fn fetch() -> String {

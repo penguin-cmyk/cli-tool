@@ -17,7 +17,9 @@ pub fn cat(command: &Vec<&str>) {
     let contents = reader.lines();
 
     for line in contents {
-        let line = line.unwrap();
-        println!("{}", line);
+        let _ = match line {
+            Ok(line) => println!("{}", line),
+            Err(_) => { continue }
+        };
     }
 }
