@@ -5,7 +5,7 @@ fn add_command(commands: &mut Vec<String>,command_name:&str, command_info: &str)
 }
 
 pub fn version() {
-    let version: &str = "1.1";
+    let version: &str = "1.2";
     println!("Running on version: {}", style(version).green());
 }
 pub fn help() {

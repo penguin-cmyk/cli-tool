@@ -9,7 +9,7 @@ pub mod fs {
     pub mod ls;
     pub mod touch;
     pub mod write;
-
+    pub mod mkdir;
 }
 pub mod echo {
     pub mod echo;
