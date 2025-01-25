@@ -9,7 +9,7 @@ pub fn copy(command: &Vec<&str>) {
     let path = Path::new(&destionation);
 
     if !Path::new(&file_name).exists() { println!("{}",style("  The first file does not exist").bold().red()); return; }
-    if !path.exists() { println!("{}",style("  The first file / directory does not exist").bold().red()) ; return; }
+    if !path.exists() { println!("{}",style("  The second file / directory does not exist").bold().red()) ; return; }
 
     if path.is_dir() {
         match fs::copy(&file_name, &format!("{}/{}", destionation, &file_name)) {
